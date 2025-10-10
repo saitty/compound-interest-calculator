@@ -7,6 +7,11 @@ import {
     SelectValue
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
+import { useStorage } from "@/composables/useStorage";
+import { onMounted, watch } from "vue";
+import { useI18n } from 'vue-i18n';
+
+const { locale } = useI18n();
 
 const languages = {
     en: "English",
@@ -19,10 +24,22 @@ const languages = {
     ja: "日本語",
     zh: "中文"
 };
+
+const localeStored = useStorage('locale', 'en');
+
+watch(localeStored, (newLocale) => {
+    locale.value = newLocale;
+});
+
+onMounted(() => {
+    locale.value = localeStored.value;
+});
 </script>
 
 <template>
-    <Select v-model="$i18n.locale">
+    {{ locale }}
+    {{ localeStored }}
+    <Select v-model="localeStored">
         <div>
             <Label for="locale" class="mb-1.5">{{ $t('app.language') }}</Label>
             <SelectTrigger class="w-full">

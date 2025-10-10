@@ -15,14 +15,15 @@ import CustomChartTooltip from "@/components/CustomChartTooltip.vue";
 import LocaleSelect from "./components/LocaleSelect.vue";
 import CurrencySelect from "./components/CurrencySelect.vue";
 
+import { useStorage } from "@/composables/useStorage";
 
-const years = ref<number>(10);
-const growthRate = ref<number>(0.1);
-const initialDeposit = ref<number[]>([255000]);
-const contribution = ref<number[]>([20000]);
+const years = useStorage('years', 10);
+const growthRate = useStorage('growthRate', 0.07);
+const initialDeposit = useStorage('initialDeposit', [10000], true);
+const contribution = useStorage('contribution', [20000], true);
 const annualContribution = computed(() => (contribution.value[0] || 0) * (isContributionMonthly.value ? 12 : 1));
-const isContributionMonthly = ref(true);
-const currency = ref<CurrencyCode>('CZK');
+const isContributionMonthly = useStorage('isContributionMonthly', true);
+const currency = useStorage('currency', 'EUR');
 
 const generateData = () => {
   const data = []
