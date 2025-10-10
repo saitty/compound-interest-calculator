@@ -5,12 +5,16 @@ import { omit } from "@unovis/ts"
 import { VisCrosshair, VisTooltip } from "@unovis/vue"
 import { createApp } from "vue"
 import { ChartTooltip } from "."
+import { useI18n } from "vue-i18n";
+const { t: $t } = useI18n()
 
 const props = withDefaults(defineProps<{
   colors: string[]
   index: string
   items: BulletLegendItemInterface[]
   customTooltip?: Component
+  locale?: string
+  currency?: string
 }>(), {
   colors: () => [],
 })
@@ -18,8 +22,10 @@ const props = withDefaults(defineProps<{
 // Use weakmap to store reference to each datapoint for Tooltip
 const wm = new WeakMap()
 function template(d: any) {
-  if (wm.has(d)) {
-    return wm.get(d)
+  const cacheKey = JSON.stringify({ data: d, locale: props.locale, currency: props.currency });
+
+  if (wm.has(d) && wm.get(d).locale === props.locale && wm.get(d).currency === props.currency) {
+    return wm.get(d).html
   }
   else {
     const componentDiv = document.createElement("div")
@@ -28,9 +34,15 @@ function template(d: any) {
       return { ...legendReference, value }
     })
     const TooltipComponent = props.customTooltip ?? ChartTooltip
-    createApp(TooltipComponent, { title: d[props.index].toString(), data: omittedData }).mount(componentDiv)
-    wm.set(d, componentDiv.innerHTML)
-    return componentDiv.innerHTML
+    createApp(TooltipComponent, { 
+      title: $t(`chart.yearLabel`, { year: d[props.index] }),
+      data: omittedData,
+      locale: props.locale,
+      currency: props.currency
+    }).mount(componentDiv)
+    const html = componentDiv.innerHTML
+    wm.set(d, { html, locale: props.locale, currency: props.currency })
+    return html
   }
 }
 

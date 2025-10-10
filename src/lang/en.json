@@ -1,0 +1,33 @@
+{
+  "message": {
+    "hello": "Hello World!"
+  },
+  "app": {
+    "title": "Compound Interest Calculator",
+    "settings": "Settings",
+    "language": "Language:",
+    "currency": "Currency:",
+    "totalBalance": "Total balance",
+    "totalContributions": "Total contributions",
+    "totalInterestEarned": "Total interest",
+    "contributionFrequency": "Contribution frequency:",
+    "annual": "Annual",
+    "monthly": "Monthly"
+  },
+  "form": {
+    "year": "Years of growth",
+    "percent": "Rate of return",
+    "amount": "Amount",
+    "initialDeposit": "Initial deposit",
+    "contribution": "Contribution amount"
+  },
+  "chart": {
+    "compounded": "Compounded:",
+    "base": "Base:",
+    "yearLabel": "Year {year}"
+  },
+  "select": {
+    "selectLocale": "Select a locale",
+    "selectCurrency": "Select a currency"
+  }
+}

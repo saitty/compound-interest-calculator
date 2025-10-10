@@ -1,0 +1,33 @@
+{
+  "message": {
+    "hello": "Ahoj světe!"
+  },
+  "app": {
+    "title": "Kalkulačka složeného úroku",
+    "settings": "Nastavení",
+    "language": "Jazyk:",
+    "currency": "Měna:",
+    "totalBalance": "Celkový zůstatek",
+    "totalContributions": "Celkové příspěvky",
+    "totalInterestEarned": "Celkový úrok",
+    "contributionFrequency": "Frekvence příspěvků:",
+    "annual": "Ročně",
+    "monthly": "Měsíčně"
+  },
+  "form": {
+    "year": "Počet let",
+    "percent": "Roční úroková sazba",
+    "amount": "Částka",
+    "initialDeposit": "Počáteční vklad",
+    "contribution": "Částka příspěvku"
+  },
+  "chart": {
+    "compounded": "Složené",
+    "base": "Základ",
+    "yearLabel": "Rok {year}"
+  },
+  "select": {
+    "selectLocale": "Vyberte jazyk",
+    "selectCurrency": "Vyberte měnu"
+  }
+}

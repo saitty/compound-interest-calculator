@@ -16,23 +16,10 @@ const emits = defineEmits<{
 
 const elRef = ref<HTMLElement>()
 
-function keepStyling() {
-  const selector = `.${BulletLegend.selectors.item}`
-  nextTick(() => {
-    const elements = elRef.value?.querySelectorAll(selector)
-    const classes = buttonVariants({ variant: "ghost", size: "xs" }).split(" ")
-
-    elements?.forEach(el => el.classList.add(...classes, "!inline-flex", "!mr-2"))
-  })
-}
-
-onMounted(() => {
-  keepStyling()
-})
 
 function onLegendItemClick(d: BulletLegendItemInterface, i: number) {
   emits("legendItemClick", d, i)
-  const isBulletActive = !props.items[i].inactive
+  const isBulletActive = !props.items[i]?.inactive
   const isFilterApplied = props.items.some(i => i.inactive)
   if (isFilterApplied && isBulletActive) {
     // reset filter
@@ -42,19 +29,34 @@ function onLegendItemClick(d: BulletLegendItemInterface, i: number) {
     // apply selection, set other item as inactive
     emits("update:items", props.items.map(item => item.name === d.name ? ({ ...d, inactive: false }) : { ...item, inactive: true }))
   }
-  keepStyling()
 }
 </script>
 
 <template>
   <div
-    ref="elRef" class="w-max" :style="{
+    ref="elRef" class="w-max flex gap-2 mr-6 mt-2" :style="{
       '--vis-legend-bullet-size': '16px',
     }"
   >
-    <VisBulletLegend
-      :items="items"
-      :on-legend-item-click="onLegendItemClick"
-    />
+    <div v-for="item in items.slice().reverse()" :key="item.name">
+      <button
+        type="button"
+        :class="[
+          buttonVariants({
+            variant: item.inactive ? 'ghost' : 'outline',
+            size: 'sm',
+          }),
+          'cursor-pointer',
+        ]"
+        @click="onLegendItemClick(item, items.indexOf(item))"
+      >
+        <span 
+          class="inline-block w-3 h-3 mr-1 rounded-sm"
+          :style="{ backgroundColor: typeof item.color === 'string' ? item.color : Array.isArray(item.color) ? item.color[0] : '' }"
+        ></span>
+        {{ item.label }}
+      </button>
+    </div>
+    
   </div>
 </template>
