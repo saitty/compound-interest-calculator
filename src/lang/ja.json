@@ -1,0 +1,71 @@
+{
+  "message": {
+    "hello": "こんにちは世界！"
+  },
+  "app": {
+    "title": "複利計算機",
+    "settings": "設定",
+    "language": "言語:",
+    "currency": "通貨:",
+    "totalBalance": "総残高",
+    "totalContributions": "総拠出額",
+    "totalInterestEarned": "総利息",
+    "contributionFrequency": "拠出頻度:",
+    "annual": "年次",
+    "monthly": "月次"
+  },
+  "form": {
+    "year": "成長年数",
+    "percent": "収益率",
+    "amount": "金額",
+    "initialDeposit": "初期預金",
+    "contribution": "拠出金額"
+  },
+  "chart": {
+    "compounded": "複利:",
+    "base": "元本:",
+    "yearLabel": "{year}年"
+  },
+  "select": {
+    "selectLocale": "言語を選択",
+    "selectCurrency": "通貨を選択"
+  },
+  "currencies": {
+    "USD": "米ドル",
+    "EUR": "ユーロ",
+    "JPY": "日本円",
+    "GBP": "英ポンド",
+    "CNY": "中国元",
+    "AUD": "豪ドル",
+    "CAD": "カナダドル",
+    "CHF": "スイスフラン",
+    "HKD": "香港ドル",
+    "SGD": "シンガポールドル",
+    "SEK": "スウェーデンクローナ",
+    "KRW": "韓国ウォン",
+    "NOK": "ノルウェークローネ",
+    "NZD": "ニュージーランドドル",
+    "INR": "インドルピー",
+    "MXN": "メキシコペソ",
+    "TWD": "台湾ドル",
+    "ZAR": "南アフリカランド",
+    "BRL": "ブラジルレアル",
+    "DKK": "デンマーククローネ",
+    "PLN": "ポーランドズウォティ",
+    "THB": "タイバーツ",
+    "ILS": "イスラエルシェケル",
+    "IDR": "インドネシアルピア",
+    "CZK": "チェココルナ",
+    "AED": "UAEディルハム",
+    "TRY": "トルコリラ",
+    "HUF": "ハンガリーフォリント",
+    "CLP": "チリペソ",
+    "SAR": "サウジアラビアリヤル",
+    "PHP": "フィリピンペソ",
+    "MYR": "マレーシアリンギット",
+    "COP": "コロンビアペソ",
+    "RUB": "ロシアルーブル",
+    "RON": "ルーマニアレウ",
+    "PEN": "ペルーソル"
+  }
+}

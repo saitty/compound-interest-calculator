@@ -1,0 +1,71 @@
+{
+  "message": {
+    "hello": "Hallo Welt!"
+  },
+  "app": {
+    "title": "Zinseszins-Rechner",
+    "settings": "Einstellungen",
+    "language": "Sprache:",
+    "currency": "Währung:",
+    "totalBalance": "Gesamtguthaben",
+    "totalContributions": "Gesamtbeiträge",
+    "totalInterestEarned": "Gesamtzinsen",
+    "contributionFrequency": "Beitragshäufigkeit:",
+    "annual": "Jährlich",
+    "monthly": "Monatlich"
+  },
+  "form": {
+    "year": "Jahre des Wachstums",
+    "percent": "Rendite",
+    "amount": "Betrag",
+    "initialDeposit": "Anfangseinlage",
+    "contribution": "Beitragssumme"
+  },
+  "chart": {
+    "compounded": "Zinsen:",
+    "base": "Basis:",
+    "yearLabel": "Jahr {year}"
+  },
+  "select": {
+    "selectLocale": "Wählen Sie eine Sprache",
+    "selectCurrency": "Wählen Sie eine Währung"
+  },
+  "currencies": {
+    "USD": "US-Dollar",
+    "EUR": "Euro",
+    "JPY": "Japanischer Yen",
+    "GBP": "Britisches Pfund",
+    "CNY": "Chinesischer Yuan",
+    "AUD": "Australischer Dollar",
+    "CAD": "Kanadischer Dollar",
+    "CHF": "Schweizer Franken",
+    "HKD": "Hongkong-Dollar",
+    "SGD": "Singapur-Dollar",
+    "SEK": "Schwedische Krone",
+    "KRW": "Südkoreanischer Won",
+    "NOK": "Norwegische Krone",
+    "NZD": "Neuseeländischer Dollar",
+    "INR": "Indische Rupie",
+    "MXN": "Mexikanischer Peso",
+    "TWD": "Taiwan-Dollar",
+    "ZAR": "Südafrikanischer Rand",
+    "BRL": "Brasilianischer Real",
+    "DKK": "Dänische Krone",
+    "PLN": "Polnischer Złoty",
+    "THB": "Thailändischer Baht",
+    "ILS": "Israelischer Schekel",
+    "IDR": "Indonesische Rupiah",
+    "CZK": "Tschechische Krone",
+    "AED": "VAE-Dirham",
+    "TRY": "Türkische Lira",
+    "HUF": "Ungarischer Forint",
+    "CLP": "Chilenischer Peso",
+    "SAR": "Saudi-Riyal",
+    "PHP": "Philippinischer Peso",
+    "MYR": "Malaysischer Ringgit",
+    "COP": "Kolumbianischer Peso",
+    "RUB": "Russischer Rubel",
+    "RON": "Rumänischer Leu",
+    "PEN": "Peruanischer Sol"
+  }
+}

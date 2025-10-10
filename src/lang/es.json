@@ -1,0 +1,71 @@
+{
+  "message": {
+    "hello": "¡Hola mundo!"
+  },
+  "app": {
+    "title": "Calculadora de interés compuesto",
+    "settings": "Configuración",
+    "language": "Idioma:",
+    "currency": "Moneda:",
+    "totalBalance": "Saldo total",
+    "totalContributions": "Contribuciones totales",
+    "totalInterestEarned": "Intereses totales",
+    "contributionFrequency": "Frecuencia de contribución:",
+    "annual": "Anual",
+    "monthly": "Mensual"
+  },
+  "form": {
+    "year": "Años de crecimiento",
+    "percent": "Tasa de retorno",
+    "amount": "Cantidad",
+    "initialDeposit": "Depósito inicial",
+    "contribution": "Cantidad de contribución"
+  },
+  "chart": {
+    "compounded": "Compuesto:",
+    "base": "Base:",
+    "yearLabel": "Año {year}"
+  },
+  "select": {
+    "selectLocale": "Seleccionar un idioma",
+    "selectCurrency": "Seleccionar una moneda"
+  },
+  "currencies": {
+    "USD": "dólar estadounidense",
+    "EUR": "euro",
+    "JPY": "yen japonés",
+    "GBP": "libra esterlina",
+    "CNY": "yuan chino",
+    "AUD": "dólar australiano",
+    "CAD": "dólar canadiense",
+    "CHF": "franco suizo",
+    "HKD": "dólar de Hong Kong",
+    "SGD": "dólar de Singapur",
+    "SEK": "corona sueca",
+    "KRW": "won surcoreano",
+    "NOK": "corona noruega",
+    "NZD": "dólar neozelandés",
+    "INR": "rupia india",
+    "MXN": "peso mexicano",
+    "TWD": "dólar taiwanés",
+    "ZAR": "rand sudafricano",
+    "BRL": "real brasileño",
+    "DKK": "corona danesa",
+    "PLN": "złoty polaco",
+    "THB": "baht tailandés",
+    "ILS": "shekel israelí",
+    "IDR": "rupia indonesia",
+    "CZK": "corona checa",
+    "AED": "dirham de los EAU",
+    "TRY": "lira turca",
+    "HUF": "forint húngaro",
+    "CLP": "peso chileno",
+    "SAR": "rial saudí",
+    "PHP": "peso filipino",
+    "MYR": "ringgit malayo",
+    "COP": "peso colombiano",
+    "RUB": "rublo ruso",
+    "RON": "leu rumano",
+    "PEN": "sol peruano"
+  }
+}

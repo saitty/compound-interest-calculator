@@ -1,0 +1,71 @@
+{
+  "message": {
+    "hello": "Witaj świecie!"
+  },
+  "app": {
+    "title": "Kalkulator odsetek składanych",
+    "settings": "Ustawienia",
+    "language": "Język:",
+    "currency": "Waluta:",
+    "totalBalance": "Saldo całkowite",
+    "totalContributions": "Wpłaty całkowite",
+    "totalInterestEarned": "Odsetki całkowite",
+    "contributionFrequency": "Częstotliwość wpłat:",
+    "annual": "Roczne",
+    "monthly": "Miesięczne"
+  },
+  "form": {
+    "year": "Lata wzrostu",
+    "percent": "Stopa zwrotu",
+    "amount": "Kwota",
+    "initialDeposit": "Wpłata początkowa",
+    "contribution": "Kwota wpłaty"
+  },
+  "chart": {
+    "compounded": "Składane:",
+    "base": "Podstawa:",
+    "yearLabel": "Rok {year}"
+  },
+  "select": {
+    "selectLocale": "Wybierz język",
+    "selectCurrency": "Wybierz walutę"
+  },
+  "currencies": {
+    "USD": "dolar amerykański",
+    "EUR": "euro",
+    "JPY": "jen japoński",
+    "GBP": "funt brytyjski",
+    "CNY": "juan chiński",
+    "AUD": "dolar australijski",
+    "CAD": "dolar kanadyjski",
+    "CHF": "frank szwajcarski",
+    "HKD": "dolar hongkoński",
+    "SGD": "dolar singapurski",
+    "SEK": "korona szwedzka",
+    "KRW": "won południowokoreański",
+    "NOK": "korona norweska",
+    "NZD": "dolar nowozelandzki",
+    "INR": "rupia indyjska",
+    "MXN": "peso meksykańskie",
+    "TWD": "dolar tajwański",
+    "ZAR": "rand południowoafrykański",
+    "BRL": "real brazylijski",
+    "DKK": "korona duńska",
+    "PLN": "złoty polski",
+    "THB": "baht tajski",
+    "ILS": "szekel izraelski",
+    "IDR": "rupia indonezyjska",
+    "CZK": "korona czeska",
+    "AED": "dirham ZEA",
+    "TRY": "lira turecka",
+    "HUF": "forint węgierski",
+    "CLP": "peso chilijskie",
+    "SAR": "rial saudyjski",
+    "PHP": "peso filipińskie",
+    "MYR": "ringgit malezyjski",
+    "COP": "peso kolumbijskie",
+    "RUB": "rubel rosyjski",
+    "RON": "lej rumuński",
+    "PEN": "sol peruwiański"
+  }
+}

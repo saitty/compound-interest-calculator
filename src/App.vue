@@ -43,16 +43,9 @@ const data = computed(() => generateData())
 </script>
 
 <template>
-  <main class="lg:px-12 md:px-6 sm:px-4 px-2 grid md:grid-cols-2 md:gap-6 sm:gap-4 gap-2 md:mt-6 sm:mt-4 mt-2 max-w-5xl mx-auto">
-    <div class="flex md:col-span-2 sm:items-end items-center sm:text-start text-center">
-      <h1 class="text-xl font-bold flex-1 max-w-52">{{ $t('app.title') }}</h1>
-      <Card class="grid gap-y-1.5 gap-x-4 grid-cols-2 max-w-sm p-6 ml-auto">
-        <Label class="col-span-2">{{ $t('app.settings') }}</Label>
-        <LocaleSelect />
-        <CurrencySelect v-model="currency" />
-      </Card>
-    </div>
-    <Card class="grid w-full gap-6 px-1 mx-auto md:col-span-2">
+  <main class="lg:px-12 md:px-6 sm:px-4 px-2 grid md:grid-cols-7 grid-cols-2 md:gap-6 sm:gap-4 gap-2 md:mt-6 sm:mt-4 mt-2 max-w-5xl mx-auto">
+    <h1 class="text-xl font-bold flex-1 md:col-span-7 col-span-2">{{ $t('app.title') }}</h1>
+    <Card class="grid w-full gap-6 px-1 mx-auto md:col-span-7 col-span-2">
       <AreaChart
         :data="data"
         index="year"
@@ -69,7 +62,7 @@ const data = computed(() => generateData())
         :custom-tooltip="CustomChartTooltip"
       />
     </Card>
-    <Card class="grid w-full gap-6 p-6 mx-auto">
+    <Card class="grid w-full gap-6 p-6 mx-auto md:col-span-3 col-span-2">
       <div class="flex gap-4">
         <InterestPicker v-model="growthRate" />
         <YearPicker v-model="years" />
@@ -113,7 +106,7 @@ const data = computed(() => generateData())
         </ButtonGroup>
       </div>
     </Card>
-    <Card class="grid w-full gap-6 p-6 mx-auto content-baseline">
+    <Card class="grid w-full gap-6 p-6 mx-auto content-baseline md:col-span-2">
       <p class="text-lg font-semibold">
         <Label class="mb-2 text-chart-4">{{ $t('app.totalBalance') }}</Label>
         {{ formatCurrency(data[data.length - 1]?.['totalBalance'],$i18n.locale, currency) }}
@@ -126,6 +119,11 @@ const data = computed(() => generateData())
         <Label class="mb-2">{{ $t('app.totalInterestEarned') }}</Label>
         {{ formatCurrency((data[data.length - 1]?.['totalBalance'] || 0) - (data[data.length - 1]?.['totalContributions'] || 0),$i18n.locale, currency) }}
       </p>
+    </Card>
+    <Card class="grid w-full gap-6 p-6 mx-auto content-baseline md:col-span-2">
+      <Label>{{ $t('app.settings') }}</Label>
+      <LocaleSelect />
+      <CurrencySelect v-model="currency" />
     </Card>
   </main>
 </template>

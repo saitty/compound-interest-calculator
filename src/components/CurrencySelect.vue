@@ -20,18 +20,19 @@ const emit = defineEmits(['update:modelValue'])
         :model-value="props.modelValue"
         @update:model-value="emit('update:modelValue', $event)"
     >
-    
-        <SelectTrigger class="w-full">
-            <Label for="currency">{{ $t('app.currency') }}</Label>
-            <SelectValue :placeholder="$t('select.selectCurrency')" />
-        </SelectTrigger>
+        <div>
+            <Label for="currency" class="mb-1.5">{{ $t('app.currency') }}</Label>
+            <SelectTrigger class="w-full">
+                <SelectValue :placeholder="$t('select.selectCurrency')" />
+            </SelectTrigger>
+        </div>
         <SelectContent>
             <SelectItem 
                 v-for="code in currencyCodes"
                 :key="`currency-${code}`" 
                 :value="code"
             >
-                {{ code }}
+                {{ code + ' - ' + $t('currencies.' + code) }}
             </SelectItem>
         </SelectContent>
     </Select>

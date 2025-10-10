@@ -1,0 +1,71 @@
+{
+  "message": {
+    "hello": "你好世界！"
+  },
+  "app": {
+    "title": "复利计算器",
+    "settings": "设置",
+    "language": "语言:",
+    "currency": "货币:",
+    "totalBalance": "总余额",
+    "totalContributions": "总投入",
+    "totalInterestEarned": "总利息",
+    "contributionFrequency": "投入频率:",
+    "annual": "年度",
+    "monthly": "月度"
+  },
+  "form": {
+    "year": "增长年数",
+    "percent": "回报率",
+    "amount": "金额",
+    "initialDeposit": "初始存款",
+    "contribution": "投入金额"
+  },
+  "chart": {
+    "compounded": "复利:",
+    "base": "本金:",
+    "yearLabel": "第{year}年"
+  },
+  "select": {
+    "selectLocale": "选择语言",
+    "selectCurrency": "选择货币"
+  },
+  "currencies": {
+    "USD": "美元",
+    "EUR": "欧元",
+    "JPY": "日元",
+    "GBP": "英镑",
+    "CNY": "人民币",
+    "AUD": "澳元",
+    "CAD": "加元",
+    "CHF": "瑞士法郎",
+    "HKD": "港币",
+    "SGD": "新加坡元",
+    "SEK": "瑞典克朗",
+    "KRW": "韩元",
+    "NOK": "挪威克朗",
+    "NZD": "新西兰元",
+    "INR": "印度卢比",
+    "MXN": "墨西哥比索",
+    "TWD": "新台币",
+    "ZAR": "南非兰特",
+    "BRL": "巴西雷亚尔",
+    "DKK": "丹麦克朗",
+    "PLN": "波兰兹罗提",
+    "THB": "泰铢",
+    "ILS": "以色列新谢克尔",
+    "IDR": "印尼盾",
+    "CZK": "捷克克朗",
+    "AED": "阿联酋迪拉姆",
+    "TRY": "土耳其里拉",
+    "HUF": "匈牙利福林",
+    "CLP": "智利比索",
+    "SAR": "沙特里亚尔",
+    "PHP": "菲律宾比索",
+    "MYR": "马来西亚林吉特",
+    "COP": "哥伦比亚比索",
+    "RUB": "俄罗斯卢布",
+    "RON": "罗马尼亚列伊",
+    "PEN": "秘鲁索尔"
+  }
+}
