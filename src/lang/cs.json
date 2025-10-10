@@ -9,10 +9,14 @@
     "currency": "Měna:",
     "totalBalance": "Celkový zůstatek",
     "totalContributions": "Celkové příspěvky",
-    "totalInterestEarned": "Celkový úrok",
+    "totalInterestEarned": "Celkový vydělaný úrok",
     "contributionFrequency": "Frekvence příspěvků:",
     "annual": "Ročně",
-    "monthly": "Měsíčně"
+    "monthly": "Měsíčně",
+    "theme": "Vzhled:",
+    "light": "Světlý",
+    "dark": "Tmavý",
+    "system": "Systému"
   },
   "form": {
     "year": "Počet let",

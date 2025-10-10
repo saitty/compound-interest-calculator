@@ -14,12 +14,13 @@ import MoneyPicker from "@/components/MoneyPicker.vue";
 import CustomChartTooltip from "@/components/CustomChartTooltip.vue";
 import LocaleSelect from "./components/LocaleSelect.vue";
 import CurrencySelect from "./components/CurrencySelect.vue";
+import DarkmodeToggle from "./components/DarkmodeToggle.vue";
 
 import { useStorage } from "@/composables/useStorage";
 
 const years = useStorage('years', 10);
 const growthRate = useStorage('growthRate', 0.07);
-const initialDeposit = useStorage('initialDeposit', [10000], true);
+const initialDeposit = useStorage('initialDeposit', [100000], true);
 const contribution = useStorage('contribution', [20000], true);
 const annualContribution = computed(() => (contribution.value[0] || 0) * (isContributionMonthly.value ? 12 : 1));
 const isContributionMonthly = useStorage('isContributionMonthly', true);
@@ -55,7 +56,7 @@ const data = computed(() => generateData())
           'totalContributions': $t('app.totalContributions'),
           'totalBalance': $t('app.totalBalance')
         }"
-        :colors="['var(--chart-1)', 'var(--chart-4)']"
+        :colors="['var(--primary)', 'var(--chart-4)']"
         :y-formatter="(tick, i) => { return typeof tick === 'number' ? formatCurrency(tick, $i18n.locale, currency) : '' }"
         :x-formatter="(tick, i) => { return typeof tick === 'number' && tick % 1 === 0 && tick > 0 ? $t('chart.yearLabel', { year: tick }) : '' }"
         :locale="$i18n.locale"
@@ -125,6 +126,7 @@ const data = computed(() => generateData())
       <Label>{{ $t('app.settings') }}</Label>
       <LocaleSelect />
       <CurrencySelect v-model="currency" />
+      <DarkmodeToggle />
     </Card>
   </main>
 </template>

@@ -12,7 +12,11 @@
     "totalInterestEarned": "总利息",
     "contributionFrequency": "投入频率:",
     "annual": "年度",
-    "monthly": "月度"
+    "monthly": "月度",
+    "theme": "主题:",
+    "light": "浅色",
+    "dark": "深色",
+    "system": "系统"
   },
   "form": {
     "year": "增长年数",

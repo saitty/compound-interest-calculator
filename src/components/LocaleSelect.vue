@@ -37,8 +37,6 @@ onMounted(() => {
 </script>
 
 <template>
-    {{ locale }}
-    {{ localeStored }}
     <Select v-model="localeStored">
         <div>
             <Label for="locale" class="mb-1.5">{{ $t('app.language') }}</Label>

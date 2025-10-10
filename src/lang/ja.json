@@ -12,7 +12,11 @@
     "totalInterestEarned": "総利息",
     "contributionFrequency": "拠出頻度:",
     "annual": "年次",
-    "monthly": "月次"
+    "monthly": "月次",
+    "theme": "テーマ:",
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
   },
   "form": {
     "year": "成長年数",

@@ -12,7 +12,11 @@
     "totalInterestEarned": "Intérêts totaux",
     "contributionFrequency": "Fréquence de contribution:",
     "annual": "Annuel",
-    "monthly": "Mensuel"
+    "monthly": "Mensuel",
+    "theme": "Thème:",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
   },
   "form": {
     "year": "Années de croissance",

@@ -12,7 +12,11 @@
     "totalInterestEarned": "Gesamtzinsen",
     "contributionFrequency": "Beitragshäufigkeit:",
     "annual": "Jährlich",
-    "monthly": "Monatlich"
+    "monthly": "Monatlich",
+    "theme": "Theme:",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
   },
   "form": {
     "year": "Jahre des Wachstums",

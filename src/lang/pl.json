@@ -12,7 +12,11 @@
     "totalInterestEarned": "Odsetki całkowite",
     "contributionFrequency": "Częstotliwość wpłat:",
     "annual": "Roczne",
-    "monthly": "Miesięczne"
+    "monthly": "Miesięczne",
+    "theme": "Motyw:",
+    "light": "Jasny",
+    "dark": "Ciemny",
+    "system": "System"
   },
   "form": {
     "year": "Lata wzrostu",
