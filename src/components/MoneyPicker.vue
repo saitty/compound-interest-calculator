@@ -29,7 +29,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 <template>
   <div>
-    <Label v-if="props.label" :for="props.id">{{ props.label }}</Label>
+    <Label v-if="props.label" class="mb-1.5" :for="props.id">{{ props.label }}</Label>
     <NumberField 
       v-bind="forwarded"
       :format-options="{
