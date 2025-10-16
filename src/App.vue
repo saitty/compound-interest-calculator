@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { computed } from "vue";
 import { compoundInterest, formatCurrency } from "@/lib/utils";
-import type { CurrencyCode } from "@/types";
 import { AreaChart } from "@/components/ui/chart-area";
 import { Card } from "./components/ui/card";
 import { Label } from "@/components/ui/label";
@@ -46,8 +45,8 @@ const data = computed(() => generateData())
 
 <template>
   <main class="lg:px-12 md:px-6 sm:px-4 px-2 grid md:grid-cols-7 grid-cols-2 md:gap-6 sm:gap-4 gap-2 md:mt-6 sm:mt-4 mt-2 max-w-5xl mx-auto">
-    <h1 class="text-xl font-bold flex-1 md:col-span-7 col-span-2">{{ $t('app.title') }}</h1>
-    <Card class="grid w-full gap-6 px-1 mx-auto md:col-span-7 col-span-2">
+    <h1 class="order-1 text-xl font-bold flex-1 md:col-span-7 col-span-2">{{ $t('app.title') }}</h1>
+    <Card class="order-2 grid w-full gap-6 px-1 mx-auto md:col-span-7 col-span-2">
       <AreaChart
         :data="data"
         index="year"
@@ -64,7 +63,7 @@ const data = computed(() => generateData())
         :custom-tooltip="CustomChartTooltip"
       />
     </Card>
-    <Card class="grid w-full gap-6 p-6 mx-auto md:col-span-3 col-span-2">
+    <Card class="md:order-3 order-4 grid w-full gap-6 p-6 mx-auto md:col-span-3 col-span-2">
       <div class="flex gap-4">
         <InterestPicker v-model="growthRate" />
         <YearPicker v-model="years" />
@@ -108,21 +107,29 @@ const data = computed(() => generateData())
         </ButtonGroup>
       </div>
     </Card>
-    <Card class="grid w-full gap-6 p-6 mx-auto content-baseline md:col-span-2">
-      <p class="text-lg font-semibold">
-        <Label class="mb-2 text-chart-4">{{ $t('app.totalBalance') }}</Label>
-        {{ formatCurrency(data[data.length - 1]?.['totalBalance'],$i18n.locale, currency) }}
-      </p>
-      <p class="text-lg font-semibold">
-        <Label class="mb-2 text-primary">{{ $t('app.totalContributions') }}</Label>
-        {{ formatCurrency(data[data.length - 1]?.['totalContributions'],$i18n.locale, currency) }}
-      </p>
-      <p class="text-lg font-semibold">
-        <Label class="mb-2">{{ $t('app.totalInterestEarned') }}</Label>
-        {{ formatCurrency((data[data.length - 1]?.['totalBalance'] || 0) - (data[data.length - 1]?.['totalContributions'] || 0),$i18n.locale, currency) }}
-      </p>
+    <Card class="md:order-4 order-3 grid w-full gap-6 p-6 mx-auto content-baseline col-span-2">
+      <div class="flex flex-col gap-4">
+        <div class="text-center flex-1">
+          <Label class="block mb-2 text-chart-4">{{ $t('app.totalBalance') }}</Label>
+          <p class="text-lg font-semibold">
+          {{ formatCurrency(data[data.length - 1]?.['totalBalance'],$i18n.locale, currency) }}
+          </p>
+        </div>
+        <div class="text-center flex-1">
+          <Label class="block mb-2 text-primary">{{ $t('app.totalContributions') }}</Label>
+          <p class="text-lg font-semibold">
+          {{ formatCurrency(data[data.length - 1]?.['totalContributions'],$i18n.locale, currency) }}
+          </p>
+        </div>
+        <div class="text-center flex-1">
+          <Label class="block mb-2">{{ $t('app.totalInterestEarned') }}</Label>
+          <p class="text-lg font-semibold">
+          {{ formatCurrency((data[data.length - 1]?.['totalBalance'] || 0) - (data[data.length - 1]?.['totalContributions'] || 0),$i18n.locale, currency) }}
+          </p>
+        </div>
+      </div>
     </Card>
-    <Card class="grid w-full gap-6 p-6 mx-auto content-baseline md:col-span-2">
+    <Card class="order-5 grid w-full gap-6 p-6 mx-auto content-baseline col-span-2">
       <Label>{{ $t('app.settings') }}</Label>
       <LocaleSelect />
       <CurrencySelect v-model="currency" />
