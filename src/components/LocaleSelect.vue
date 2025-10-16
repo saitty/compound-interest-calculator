@@ -11,7 +11,7 @@ import { useStorage } from "@/composables/useStorage";
 import { onMounted, watch } from "vue";
 import { useI18n } from 'vue-i18n';
 
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 
 const languages = {
     en: "English",
@@ -29,7 +29,9 @@ const localeStored = useStorage('locale', 'en');
 
 watch(localeStored, (newLocale) => {
     locale.value = newLocale;
-});
+    document.title = t('app.title');
+    document.documentElement.lang = newLocale;
+}, { immediate: true });
 
 onMounted(() => {
     locale.value = localeStored.value;
