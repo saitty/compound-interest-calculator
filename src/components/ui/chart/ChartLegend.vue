@@ -54,7 +54,7 @@ function onLegendItemClick(d: BulletLegendItemInterface, i: number) {
           class="inline-block w-3 h-3 mr-1 rounded-sm"
           :style="{ backgroundColor: typeof item.color === 'string' ? item.color : Array.isArray(item.color) ? item.color[0] : '' }"
         ></span>
-        {{ item.label }}
+        {{ item.name }}
       </button>
     </div>
     
