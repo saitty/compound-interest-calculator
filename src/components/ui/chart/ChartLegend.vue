@@ -5,7 +5,7 @@ import { VisBulletLegend } from "@unovis/vue"
 import { nextTick, onMounted, ref } from "vue"
 import { buttonVariants } from '@/components/ui/button'
 
-const props = withDefaults(defineProps<{ items: BulletLegendItemInterface[] }>(), {
+const props = withDefaults(defineProps<{ items: (BulletLegendItemInterface & { label: string })[] }>(), {
   items: () => [],
 })
 
@@ -54,7 +54,7 @@ function onLegendItemClick(d: BulletLegendItemInterface, i: number) {
           class="inline-block w-3 h-3 mr-1 rounded-sm"
           :style="{ backgroundColor: typeof item.color === 'string' ? item.color : Array.isArray(item.color) ? item.color[0] : '' }"
         ></span>
-        {{ item.name }}
+        {{ item.label }}
       </button>
     </div>
     
