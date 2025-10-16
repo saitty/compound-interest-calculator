@@ -8,7 +8,8 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { useStorage } from "@/composables/useStorage";
-import { onMounted, onUnmounted, watch, ref } from "vue";
+import { onMounted, onUnmounted, watch, ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
 
 const themeStored = useStorage('theme', 'system');
 
@@ -75,6 +76,19 @@ onUnmounted(() => {
         systemThemeMediaQuery.removeEventListener('change', handleSystemThemeChange);
     }
 });
+
+const { t, locale } = useI18n();
+
+const selectedThemeLabel = computed(() => {
+    switch (themeStored.value) {
+        case 'light':
+            return t('app.light');
+        case 'dark':
+            return t('app.dark');
+        default:
+            return t('app.system');
+    }
+});
 </script>
 
 <template>
@@ -82,12 +96,14 @@ onUnmounted(() => {
         <div>
             <Label for="theme" class="mb-1.5">{{ $t('app.theme') }}</Label>
             <SelectTrigger class="w-full">
-                <SelectValue />
+                <SelectValue :placeholder="$t('select.selectTheme')">
+                    {{ selectedThemeLabel }}
+                </SelectValue>
             </SelectTrigger>
         </div>
         <SelectContent>
             <SelectItem v-for="theme in ['system', 'light', 'dark']" :key="`theme-${theme}`" :value="theme">
-                {{ theme === 'light' ? $t('app.light') : theme === 'dark' ? $t('app.dark') : $t('app.system') }}
+                {{ $t('app.' + theme) }}
             </SelectItem>
         </SelectContent>
     </Select>
