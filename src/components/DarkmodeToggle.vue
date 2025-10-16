@@ -82,7 +82,7 @@ onUnmounted(() => {
         <div>
             <Label for="theme" class="mb-1.5">{{ $t('app.theme') }}</Label>
             <SelectTrigger class="w-full">
-                <SelectValue :placeholder="$t('select.selectTheme')" />
+                <SelectValue />
             </SelectTrigger>
         </div>
         <SelectContent>
